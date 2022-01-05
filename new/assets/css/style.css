@@ -649,7 +649,7 @@ header {
 }
 .header-navigation .main-menu ul li > a {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   color: #7f918b;
   font-weight: 700;
   text-transform: capitalize;
@@ -6817,7 +6817,6 @@ header {
 
 .contact-info-area-v1 {
   position: relative;
-  margin-top: -210px;
 }
 .contact-info-area-v1 .contact-info-item {
   padding: 25px;
@@ -7029,7 +7028,7 @@ header {
   }
 }
 .footer-area .footer-widget h4.widget-title {
-  margin-bottom: 42px;
+  margin-bottom: 20px;
   font-size: 20px;
 }
 .footer-area .footer-widget .widget.about-widget .about-content p {
