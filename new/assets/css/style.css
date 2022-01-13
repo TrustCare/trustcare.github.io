@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /*-----------------------------------------------------------------------------------
 
-    Template Name: Qempo 
+    Template Name: Qempo
     Description: Digital Agency HTML Template
-    Author: WebTend 
+    Author: WebTend
     Author URI: https://webtend.net/
     Version: 1.0
 
@@ -29,7 +29,7 @@
 
 -----------------------------------------------------------------------------------*/
 /*=========================
-    1. Start COMMON css 
+    1. Start COMMON css
 ==========================*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap");
 html {
@@ -399,7 +399,7 @@ button {
 }
 
 /*
-    search 
+    search
 */
 #search-modal {
   background: rgba(23, 26, 33, 0.85);
@@ -591,10 +591,10 @@ button {
   }
 }
 /*====================
-    End COMMON css 
+    End COMMON css
 ======================*/
 /*---=======================
-   02. Start Header  css 
+   02. Start Header  css
 ===========================---*/
 header {
   z-index: 1;
@@ -1324,7 +1324,7 @@ header {
   }
 }
 /*---=======================
-   03. Start Hero  css 
+   03. Start Hero  css
 ===========================---*/
 .hero-area-v1 {
   position: relative;
@@ -1761,7 +1761,7 @@ header {
 }
 
 /*---=======================
-   04. Start About  css 
+   04. Start About  css
 ===========================---*/
 .about-area-v1 .about-img-box {
   position: relative;
@@ -2491,7 +2491,7 @@ header {
 }
 
 /*---=======================
-   05. Start Service  css 
+   05. Start Service  css
 ===========================---*/
 @-webkit-keyframes shake {
   0% {
@@ -2975,7 +2975,7 @@ header {
 }
 
 /*---=======================
-   06. Start FEatures  css 
+   06. Start FEatures  css
 ===========================---*/
 .features-area-v1 .section-title h2 {
   font-size: 58px;
@@ -4128,7 +4128,7 @@ header {
 }
 
 /*---=======================
-   07. Start FAQ  css 
+   07. Start FAQ  css
 ===========================---*/
 .faq-filter form .form_control {
   height: 70px;
@@ -4279,7 +4279,7 @@ header {
 }
 
 /*---=======================
-   08. Start Portfolio  css 
+   08. Start Portfolio  css
 ===========================---*/
 @media (max-width: 991px) {
   .filter-btn {
@@ -4667,7 +4667,7 @@ header {
 }
 
 /*---=======================
-   09. Start Team  css 
+   09. Start Team  css
 ===========================---*/
 .team-area-v1 {
   border-top: 1px solid #efefef;
@@ -4991,7 +4991,7 @@ header {
 }
 
 /*---=========================
-   10. Start Testimonial  css 
+   10. Start Testimonial  css
 ===========================---*/
 .testimonial-area-v1 .testimonial-slide-one {
   z-index: 1;
@@ -5802,7 +5802,7 @@ header {
 }
 
 /*---=======================
-   12. Start Blog  css 
+   12. Start Blog  css
 ===========================---*/
 .post-thumbnail {
   position: relative;
@@ -6808,7 +6808,7 @@ header {
 }
 
 /*---=======================
-   13. Start Contact  css 
+   13. Start Contact  css
 ===========================---*/
 .contact-map-section .map-box iframe {
   height: 800px;
@@ -6959,7 +6959,7 @@ header {
 }
 
 /*---=======================
-   14. Start Footer  css 
+   14. Start Footer  css
 ===========================---*/
 .footer-area .social-link li, .about-me-section .about-me-area .about-me-info .social-link li {
   margin-right: 5px;
@@ -7178,7 +7178,7 @@ header {
   background: linear-gradient(90deg, #fd6151 0%, #ff774a 100%);
 }
 .footer-area .copyright-area {
-  padding: 40px 0 45px;
+  padding: 20px 0 25px;
   background: -webkit-gradient(linear, left top, right top, from(#fd6151), to(#ff774a));
   background: linear-gradient(90deg, #fd6151 0%, #ff774a 100%);
 }
