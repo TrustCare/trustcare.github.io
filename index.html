@@ -346,23 +346,23 @@
                         Group Annual Meeting: </a> Poster was accepted
                         <br>
                         <a role="button"
-                           href="https://github.com/trustcare/trustcare.github.io/new/files/2981_poster.pdf"
+                           href="https://github.com/TrustCare/TrustCare.github.io/raw/2.0/assets/files/2981_poster.pdf"
                            class="btn btn-primary btn-lg">Download our Poster.</a>
                     </li>
                 </ul>
             </div>
         </div>
-<!--        <div class="row media">-->
-<!--            <div class="col-lg-6">-->
-<!--                <ul class="filter-btn mb-60 float-lg-end wow fadeInDown">-->
-<!--                    <li data-filter="*" class="active">All</li>-->
-<!--                    <li data-filter=".goLead">GoLead</li>-->
-<!--                    &lt;!&ndash;                            <li data-filter=".cat-2">Design</li>&ndash;&gt;-->
-<!--                    &lt;!&ndash;                            <li data-filter=".cat-3">Photography</li>&ndash;&gt;-->
-<!--                    &lt;!&ndash;                            <li data-filter=".cat-4">Development</li>&ndash;&gt;-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div class="row media">-->
+        <!--            <div class="col-lg-6">-->
+        <!--                <ul class="filter-btn mb-60 float-lg-end wow fadeInDown">-->
+        <!--                    <li data-filter="*" class="active">All</li>-->
+        <!--                    <li data-filter=".goLead">GoLead</li>-->
+        <!--                    &lt;!&ndash;                            <li data-filter=".cat-2">Design</li>&ndash;&gt;-->
+        <!--                    &lt;!&ndash;                            <li data-filter=".cat-3">Photography</li>&ndash;&gt;-->
+        <!--                    &lt;!&ndash;                            <li data-filter=".cat-4">Development</li>&ndash;&gt;-->
+        <!--                </ul>-->
+        <!--            </div>-->
+        <!--        </div>-->
         <div class="row">
             <div v-for="item in activityList" class='col-lg-4 col-md-6 col-sm-12'>
                 <div class="team-item mb-30 wow fadeInUp" data-wow-delay=".2s">
@@ -392,43 +392,270 @@
     <div class="container" id="team-home">
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <div class="section-title text-center mb-65">
+                <div class="section-title text-center mb-25">
                     <h2>Our Team</h2>
                     <span class="span">Experts</span>
                 </div>
             </div>
+            <div>
+                <div class="features-tab row justify-content-center mb-25">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" data-bs-toggle="tab" data-bs-target="#team-nav">
+                                Our Team
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="tab" data-bs-target="#mentor">Our Mentor</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <div v-for="item in teamList" class="col-lg-3 col-md-6 col-sm-12">
-                <div class="team-item mb-50 wow fadeInUp">
-                    <div class="team-img">
-                        <img :src="item.image" alt="">
-                        <div class="team-overlay">
-                            <div class="team-social">
-                                <span class="hover-btn"><i class="fal fa-plus"></i></span>
-                                <ul class="team-social-link">
-                                    <li><a :href="item.links.linkedin" class="social-icon"><i
-                                            class="fab fa-linkedin"></i></a></li>
-                                    <li><a :href="item.links.github" class="social-icon"><i
-                                            class="fab fa-github"></i></a></li>
-                                </ul>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="team-nav">
+                <div class="row">
+                    <div v-for="item in teamList" class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="team-item mb-50 wow fadeInUp">
+                            <div class="team-img">
+                                <img :src="item.image" alt="">
+                                <div class="team-overlay">
+                                    <div class="team-social">
+                                        <span class="hover-btn"><i class="fal fa-plus"></i></span>
+                                        <ul class="team-social-link">
+                                            <li><a :href="item.links.linkedin" class="social-icon"><i
+                                                    class="fab fa-linkedin"></i></a></li>
+                                            <li><a :href="item.links.github" class="social-icon"><i
+                                                    class="fab fa-github"></i></a></li>
+                                            <li><a data-toggle="modal" :data-target="'#' + item.id"
+                                                   style="cursor:pointer;"
+                                                   @click="showModal(item.id)"><i class="fa fa-sticky-note"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-info text-center">
+                                <h4>{{item.firstName}} {{item.lastName}}</h4>
+                                <span class="position">{{item.position}}</span>
+                            </div>
+                        </div>
+                        <div class="modal fade" :id="item.id" tabindex="-1" role="dialog" :aria-labelledby="item.id"
+                             aria-hidden="true">
+                            <div class="modal-dialog modal-xl" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" :id="item.id">Details</h4>
+                                        <button type="button" class="close" data-dismiss="modal" data-bs-dismiss="modal"
+                                                aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="instrument">
+                                            <div class="container">
+                                                <div class="instrument-view">
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-sm-4 ins-image">
+                                                            <img :src="item.image"
+                                                                 :alt="item.name"/>
+                                                            <div class="ins-name">
+                                                                <h3>{{item.name}}
+                                                                    <small>{{item.position}}</small>
+                                                                </h3>
+                                                                <p style="text-align: justify">
+                                                                    {{item.bio}}
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-1"></div>
+                                                        <div class="col-sm-7">
+                                                            <div class="span span1">
+                                                                <p class="left" style="font-size: 17px;">
+                                                                    Title:</p>
+                                                                <p class="right" style="font-size: 17px;">
+                                                                    {{item.position}}</p>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                            <div class="span span1">
+                                                                <p class="left" style="font-size: 17px;">
+                                                                    Join Year:</p>
+                                                                <p class="right" style="font-size: 17px;">
+                                                                    {{item.year}}</p>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                            <div class="span span1">
+                                                                <p class="left" style="font-size: 17px;">
+                                                                    Email:</p>
+                                                                <p class="right" style="font-size: 17px;">
+                                                                    <a :href="'mailto:'+item.email">{{item.email}}</a>
+                                                                </p>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                            <div id="detail_team">
+                                                                <div class="ins-name">
+                                                                    <h3>Duties </h3>
+                                                                </div>
+
+                                                                <!--                                                    <div v-for="i in item.moreInfo.Duties.length">-->
+                                                                <div class="span span1">
+
+                                                                    <!--                                                                <strong> {{i}} </strong>-->
+                                                                    <!--                                                                {{item.moreInfo.Duties[i-1]}}</p>-->
+                                                                    <!--                                                            <div class="clearfix"></div>-->
+                                                                </div>
+                                                                <!--                                                        <div>-->
+                                                                <!--                                                        </div>-->
+                                                                <!--                                                        <div class="clerfix"></div>-->
+                                                                <!--                                                    </div>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--                                                <div class="modal-footer">-->
+                                            <!--                                                    <button type="button" class="btn btn-secondary"-->
+                                            <!--                                                            data-dismiss="modal">Close-->
+                                            <!--                                                    </button>-->
+                                            <!--                                                </div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal -->
                             </div>
                         </div>
                     </div>
-                    <div class="team-info text-center">
-                        <h4>{{item.firstName}} {{item.lastName}}</h4>
-                        <span class="position">{{item.position}}</span>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="mentor" role="tabpanel">
+                <div class="content-box">
+                    <div class="row">
+                        <div v-for="item in mentorList" class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="team-item mb-50 wow fadeInUp">
+                                <div class="team-img">
+                                    <img :src="item.image" alt="">
+                                    <div class="team-overlay">
+                                        <div class="team-social">
+                                            <span class="hover-btn"><i class="fal fa-plus"></i></span>
+                                            <ul class="team-social-link">
+                                                <li><a :href="item.links.linkedin" class="social-icon"><i
+                                                        class="fab fa-linkedin"></i></a></li>
+                                                <li><a :href="item.links.github" class="social-icon"><i
+                                                        class="fab fa-github"></i></a></li>
+                                                <li><a data-toggle="modal" :data-target="'#' + item.id"
+                                                       style="cursor:pointer;"
+                                                       @click="showModal(item.id)"><i class="fa fa-sticky-note"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team-info text-center">
+                                    <h4>{{item.firstName}} {{item.lastName}}</h4>
+                                    <span class="position">{{item.position}}</span>
+                                </div>
+                            </div>
+                            <div class="modal fade" :id="item.id" tabindex="-1" role="dialog" :aria-labelledby="item.id"
+                                 aria-hidden="true">
+                                <div class="modal-dialog modal-xl" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" :id="item.id">Details</h4>
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                    data-bs-dismiss="modal"
+                                                    aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="instrument">
+                                                <div class="container">
+                                                    <div class="instrument-view">
+                                                        <div class="row justify-content-center">
+                                                            <div class="col-sm-4 ins-image">
+                                                                <img :src="item.image"
+                                                                     :alt="item.name"/>
+                                                                <div class="ins-name">
+                                                                    <h3>{{item.name}}
+                                                                        <small>{{item.position}}</small>
+                                                                    </h3>
+                                                                    <p style="text-align: justify">
+                                                                        {{item.bio}}
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-1"></div>
+                                                            <div class="col-sm-7">
+                                                                <div class="span span1">
+                                                                    <p class="left" style="font-size: 17px;">
+                                                                        Title:</p>
+                                                                    <p class="right" style="font-size: 17px;">
+                                                                        {{item.position}}</p>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                                <div class="span span1">
+                                                                    <p class="left" style="font-size: 17px;">
+                                                                        Join Year:</p>
+                                                                    <p class="right" style="font-size: 17px;">
+                                                                        {{item.year}}</p>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                                <div class="span span1">
+                                                                    <p class="left" style="font-size: 17px;">
+                                                                        Email:</p>
+                                                                    <p class="right" style="font-size: 17px;">
+                                                                        <a :href="'mailto:'+item.email">{{item.email}}</a>
+                                                                    </p>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                                <div id="detail">
+                                                                    <div class="ins-name">
+                                                                        <h3>Duties </h3>
+                                                                    </div>
+
+                                                                    <!--                                                    <div v-for="i in item.moreInfo.Duties.length">-->
+                                                                    <div class="span span1">
+
+                                                                        <!--                                                                <strong> {{i}} </strong>-->
+                                                                        <!--                                                                {{item.moreInfo.Duties[i-1]}}</p>-->
+                                                                        <!--                                                            <div class="clearfix"></div>-->
+                                                                    </div>
+                                                                    <!--                                                        <div>-->
+                                                                    <!--                                                        </div>-->
+                                                                    <!--                                                        <div class="clerfix"></div>-->
+                                                                    <!--                                                    </div>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--                                                <div class="modal-footer">-->
+                                                <!--                                                    <button type="button" class="btn btn-secondary"-->
+                                                <!--                                                            data-dismiss="modal">Close-->
+                                                <!--                                                    </button>-->
+                                                <!--                                                </div>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Modal -->
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12">
-                <div class="button text-center wow fadeInUp">
-                    <a href="team.html" class="main-btn">Join With Our Team</a>
-                </div>
-            </div>
+
+
         </div>
+        <!--        <div class="row">-->
+        <!--            <div class="col-lg-12">-->
+        <!--                <div class="button text-center wow fadeInUp">-->
+        <!--                    <a href="team.html" class="main-btn">Join With Our Team</a>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
     </div>
 </section>
 <!--====== End Team section ======-->
@@ -458,13 +685,13 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="widget instagram-feed-widget wow fadeInUp mb-30">
-                        <h4 class="widget-title">Instagram Feeds</h4>
+                        <h4 class="widget-title">Group Picture Feeds</h4>
                         <ul class="instagram-list">
                             <li>
                                 <a href="about-us.html">
                                     <img src="assets/images/footer/instagram/insta-1.jpg" alt="">
                                     <div class="insta-overlay">
-                                        <i class="fab fa-instagram"></i>
+                                        <i class="fa fa-info-circle"></i>
                                     </div>
                                 </a>
                             </li>
@@ -472,7 +699,7 @@
                                 <a href="about-us.html">
                                     <img src="assets/images/footer/instagram/insta-2.jpg" alt="">
                                     <div class="insta-overlay">
-                                        <i class="fab fa-instagram"></i>
+                                        <i class="fa fa-info-circle"></i>
                                     </div>
                                 </a>
                             </li>
@@ -480,7 +707,7 @@
                                 <a href="about-us.html">
                                     <img src="assets/images/footer/instagram/insta-3.jpg" alt="">
                                     <div class="insta-overlay">
-                                        <i class="fab fa-instagram"></i>
+                                        <i class="fa fa-info-circle"></i>
                                     </div>
                                 </a>
                             </li>
@@ -488,7 +715,7 @@
                                 <a href="about-us.html">
                                     <img src="assets/images/footer/instagram/insta-4.jpg" alt="">
                                     <div class="insta-overlay">
-                                        <i class="fab fa-instagram"></i>
+                                        <i class="fa fa-info-circle"></i>
                                     </div>
                                 </a>
                             </li>
@@ -496,7 +723,7 @@
                                 <a href="about-us.html">
                                     <img src="assets/images/footer/instagram/insta-5.jpg" alt="">
                                     <div class="insta-overlay">
-                                        <i class="fab fa-instagram"></i>
+                                        <i class="fa fa-info-circle"></i>
                                     </div>
                                 </a>
                             </li>
@@ -504,7 +731,7 @@
                                 <a href="about-us.html">
                                     <img src="assets/images/footer/instagram/insta-6.jpg" alt="">
                                     <div class="insta-overlay">
-                                        <i class="fab fa-instagram"></i>
+                                        <i class="fa fa-info-circle"></i>
                                     </div>
                                 </a>
                             </li>
@@ -512,7 +739,7 @@
                                 <a href="about-us.html">
                                     <img src="assets/images/footer/instagram/insta-7.jpg" alt="">
                                     <div class="insta-overlay">
-                                        <i class="fab fa-instagram"></i>
+                                        <i class="fa fa-info-circle"></i>
                                     </div>
                                 </a>
                             </li>
@@ -520,7 +747,7 @@
                                 <a href="about-us.html">
                                     <img src="assets/images/footer/instagram/insta-8.jpg" alt="">
                                     <div class="insta-overlay">
-                                        <i class="fab fa-instagram"></i>
+                                        <i class="fa fa-info-circle"></i>
                                     </div>
                                 </a>
                             </li>
@@ -528,7 +755,7 @@
                                 <a href="about-us.html">
                                     <img src="assets/images/footer/instagram/insta-9.jpg" alt="">
                                     <div class="insta-overlay">
-                                        <i class="fab fa-instagram"></i>
+                                        <i class="fa fa-info-circle"></i>
                                     </div>
                                 </a>
                             </li>
@@ -567,7 +794,70 @@
 <!--====== End Footer ======-->
 <!--====== back-to-top ======-->
 <a href="#" class="back-to-top"><i class="fas fa-angle-up"></i></a>
+
+<!--====== Jquery js ======-->
+<script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+<script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+<!--====== Bootstrap js ======-->
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<!--====== Slick js ======-->
+<script src="assets/js/slick.min.js"></script>
+<!--====== Magnific Popup js ======-->
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<!--====== Isotope js ======-->
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<!--====== Imagesloaded js ======-->
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<!--====== counterup js ======-->
+<script src="assets/js/jquery.counterup.min.js"></script>
+<!--====== waypoints js ======-->
+<script src="assets/js/jquery.waypoints.js"></script>
+<!--====== Nice-select js ======-->
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<!--====== Nice-number js ======-->
+<script src="assets/js/jquery.nice-number.min.js"></script>
+<!--====== jquery-ui js ======-->
+<script src="assets/js/jquery-ui.min.js"></script>
+<!--====== easypiechart js ======-->
+<script src="assets/js/jquery.easypiechart.min.js"></script>
+<!--====== Wow js ======-->
+<script src="assets/js/wow.min.js"></script>
+<!--====== Main js ======-->
+<script src="assets/js/main.js"></script>
+<!--====== Vue js ======-->
+<script src="assets/js/vue.min.js"></script>
+<!--====== bootstrap js ======-->
+<script src="assets/js/bootstrap.min.js"></script>
+<!--====== Custom js ======-->
 <style>
+    .features-tab .nav-tabs {
+        border-bottom: none;
+    }
+
+    .features-tab .nav-tabs .nav-item {
+        margin-right: 20px;
+    }
+
+    .features-tab .nav-tabs .nav-link {
+        background-color: #ffffff;
+        font-weight: 600;
+        color: #070346;
+        border: none;
+        margin-bottom: 0px;
+        border-radius: 25px;
+        padding: 10px 40px;
+    }
+
+    .features-tab .nav-tabs .nav-link:hover, .features-tab .nav-tabs .nav-link.active {
+        background-color: #fd6350;
+        color: #fff;
+    }
+
+    .content-box p {
+        margin-bottom: 20px;
+    }
+
     .expertiesico {
         padding: 22% 20% 20% 0%;
         text-align: right;
@@ -628,63 +918,106 @@
         font-weight: 600;
         border-radius: 0;
     }
+
+    .instrument {
+        padding: 40px 0;
+    }
+
+    .ins-name {
+        margin: 30px 0;
+    }
+
+    .ins-name h3 {
+        font-size: 27px;
+        color: #000;
+        font-weight: 600;
+        letter-spacing: 3px;
+    }
+
+    .ins-name p {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 14.5px;
+        line-height: 28px;
+        color: #263d48;
+        font-weight: 300;
+        margin: 20px 0 20px;
+    }
+
+    p.left {
+        float: left;
+        font-size: 16px;
+        color: #000;
+        letter-spacing: 2px;
+        margin-right: 5%;
+        width: 35%;
+        font-weight: 600;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    p.right {
+        font-size: 14px;
+        float: left;
+        color: #555252;
+        letter-spacing: 1px;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    .span1 {
+        margin: 3px 0;
+        padding: 5px 0;
+        /*border-top: 1px solid #eee;*/
+        /*border-bottom: 1px solid #eee;*/
+    }
+
+    .span4 {
+        border-bottom: 1px solid #Eee;
+        padding-bottom: 18px;
+    }
+
+    .ins-image {
+        margin-top: 30px;
+    }
+
+    .ins-image img {
+        width: 100%;
+        border: 1px solid #eee;
+        padding: 6px;
+    }
+
+    h2
 </style>
-<!--====== Jquery js ======-->
-<script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
-<script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-<!--====== Bootstrap js ======-->
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<!--====== Slick js ======-->
-<script src="assets/js/slick.min.js"></script>
-<!--====== Magnific Popup js ======-->
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<!--====== Isotope js ======-->
-<script src="assets/js/isotope.pkgd.min.js"></script>
-<!--====== Imagesloaded js ======-->
-<script src="assets/js/imagesloaded.pkgd.min.js"></script>
-<!--====== counterup js ======-->
-<script src="assets/js/jquery.counterup.min.js"></script>
-<!--====== waypoints js ======-->
-<script src="assets/js/jquery.waypoints.js"></script>
-<!--====== Nice-select js ======-->
-<script src="assets/js/jquery.nice-select.min.js"></script>
-<!--====== Nice-number js ======-->
-<script src="assets/js/jquery.nice-number.min.js"></script>
-<!--====== jquery-ui js ======-->
-<script src="assets/js/jquery-ui.min.js"></script>
-<!--====== easypiechart js ======-->
-<script src="assets/js/jquery.easypiechart.min.js"></script>
-<!--====== Wow js ======-->
-<script src="assets/js/wow.min.js"></script>
-<!--====== Main js ======-->
-<script src="assets/js/main.js"></script>
-<!--====== Vue js ======-->
-<script src="assets/js/vue.min.js"></script>
-<!--====== Custom js ======-->
 <script>
     teamList = [
         {
-            "image": "assets/img/gallery/lulan.png",
+            "id": "ls",
+            "image": "assets/img/gallery/Lulan.png",
             "firstName": "Lulan",
             "lastName": "Shen",
             "position": "Project Lead",
+            "email": "lulan.shen@mail.mcgill.ca",
+            "year": "2020",
             "links": {
                 "github": "",
                 "linkedin": "https://www.linkedin.com/in/lulan-shen/"
-            }
+            },
+            "bio": "Currently a Ph.D. candidate in the Department of Electrical and Computer Engineering, specializes in machine learning, at McGill University, and possesses an M.Sc. degree in Mathematical Modelling and Scientific Computing at the University of Oxford. Three-year work experience as a system engineer in Bosch Automotive for designing vehicle software platforms and vehicle functions."
         },
         {
-            "image": "assets/img/gallery/shilei.png",
+            "id": "sl",
+            "image": "assets/img/gallery/Shilei.png",
             "firstName": "Shilei ",
             "lastName": "Lin",
             "position": "App Developer",
+            "email": "shilei.lin@mail.mcgill.ca",
+            "year": "2020",
             "links": {
                 "github": "https://s1lin.github.io/",
                 "linkedin": "https://www.linkedin.com/in/shilei-lin-269191128/"
-            }
+            },
+            "bio": ""
         },
         {
+            "id": "gk",
             "image": "assets/img/gallery/Guneet.png",
             "firstName": "Guneet ",
             "lastName": "Kour",
@@ -692,49 +1025,59 @@
             "links": {
                 "github": "",
                 "linkedin": ""
-            }
+            },
+            "bio": ""
         },
         {
-            "image": "assets/img/gallery/yirui.png",
+            "id": "yr",
+            "image": "assets/img/gallery/Yirui.png",
             "firstName": "Yirui ",
             "lastName": "Ren",
             "position": "Business Analyst",
             "links": {
                 "github": "",
                 "linkedin": ""
-            }
+            },
+            "bio": ""
         },
         {
-            "image": "assets/img/gallery/erqun.png",
+            "id": "ed",
+            "image": "assets/img/gallery/Erqun.png",
             "firstName": "Erqun ",
             "lastName": "Dong",
             "position": "Tech Support",
             "links": {
                 "github": "",
                 "linkedin": ""
-            }
+            },
+            "bio": ""
         },
         {
-            "image": "assets/img/gallery/ruofeng.png",
+            "id": "rl",
+            "image": "assets/img/gallery/Ruofeng.png",
             "firstName": "Ruofeng ",
             "lastName": "Li",
             "position": "Tech Director",
             "links": {
                 "github": "",
                 "linkedin": ""
-            }
+            },
+            "bio": ""
         },
         {
-            "image": "assets/img/gallery/yitian.png",
+            "id": "yz",
+            "image": "assets/img/gallery/Yitian.png",
             "firstName": "Yitian ",
             "lastName": "Zhang",
             "position": "AI Algorithm Developer",
             "links": {
                 "github": "",
                 "linkedin": ""
-            }
+            },
+            "bio": ""
         },
         {
+            "id": "ms",
             "image": "assets/img/gallery/Manoosh.png",
             "firstName": "Manoosh ",
             "lastName": "Samiei",
@@ -742,9 +1085,11 @@
             "links": {
                 "github": "",
                 "linkedin": ""
-            }
+            },
+            "bio": ""
         },
         {
+            "id": "at",
             "image": "assets/img/gallery/Abdulrahman.png",
             "firstName": "Abdulrahman ",
             "lastName": "Takiddeen",
@@ -752,9 +1097,11 @@
             "links": {
                 "github": "",
                 "linkedin": ""
-            }
+            },
+            "bio": ""
         },
         {
+            "id": "bk",
             "image": "assets/img/gallery/Benjamin.png",
             "firstName": "Benjamin ",
             "lastName": "Akera",
@@ -762,15 +1109,73 @@
             "links": {
                 "github": "",
                 "linkedin": ""
-            }
+            },
+            "bio": ""
         }]
-
+    mentorList = [
+        {
+            "id": "hc",
+            "image": "../assets/img/gallery/Hugh.png",
+            "firstName": "Hugh ",
+            "lastName": "Cameron",
+            "position": "Mentor",
+            "email": "",
+            "year": "2020",
+            "links": {
+                "github": "",
+                "linkedin": ""
+            },
+            "bio": ""
+        },
+        {
+            "id": "ma",
+            "image": "../assets/img/gallery/Michael.png",
+            "firstName": "Michael ",
+            "lastName": "Avedesian",
+            "position": "Business Mentor",
+            "email": "",
+            "year": "2020",
+            "links": {
+                "github": "",
+                "linkedin": ""
+            },
+            "bio": ""
+        },
+        {
+            "id": "rx",
+            "image": "../assets/img/gallery/Ryan.png",
+            "firstName": "Ryan ",
+            "lastName": "Xu",
+            "position": "Consultant",
+            "email": "",
+            "year": "2020",
+            "links": {
+                "github": "",
+                "linkedin": ""
+            },
+            "bio": ""
+        }
+    ]
     let app = new Vue({
         el: '#team-home',
         data() {
             return {
-                teamList: teamList
+                teamList: teamList,
+                mentorList: mentorList
             }
+        },
+        methods: {
+            showModal(id) {
+                const myModal = document.getElementById(id);
+                const modal = new bootstrap.Modal(myModal);
+                modal.show();
+            }
+            // },
+            // closeModel(id){
+            //     const myModal = document.getElementById(id);
+            //     const modal = new bootstrap.Modal(myModal);
+            //     modal.close();
+            // }
         }
     })
 </script>
