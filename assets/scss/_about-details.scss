@@ -12,7 +12,7 @@
     }
     // left img
 	.about-img{
-		background-image: url(../img/gallery/about.png);
+		background-image: url(../images/gallery/about.png);
 		background-size: 100%;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -48,13 +48,13 @@
 			padding: 23px 88px;
 			@media #{$lg}{
 				padding: 24px 54px;
-			}	
+			}
 			@media #{$sm}{
 				padding: 24px 54px;
-			}	
+			}
 			@media #{$xs}{
 				padding: 21px 19px;
-			}	
+			}
 			.head-cap{
 				display: flex;
 				margin-bottom: 20px;
@@ -81,11 +81,11 @@
 			background: #eb4916;
 			}
 		}
-		
+
 	}
     // 	Right  Contents
     .about-details{
-		background-image: url(../img/gallery/section_bg02.png);
+		background-image: url(../images/gallery/section_bg02.png);
 		background-size: 100%;
         background-size: cover;
         background-repeat: no-repeat;
@@ -185,4 +185,3 @@
 		}
 	}
   }
-  

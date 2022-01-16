@@ -13,7 +13,7 @@
         }
     }
     .form-tittle{
-        background-image: url(../img/gallery/contact_bg.png);
+        background-image: url(../images/gallery/contact_bg.png);
         background-size: cover;
         background-repeat: no-repeat;
         padding: 68px 51px 0px 67px;
@@ -24,7 +24,7 @@
 
     #contact-form{
         padding: 61px 51px 123px 69px;
-       
+
         @media #{$xs}{
             padding: 30px 10px 208px 14px;
         }
@@ -56,7 +56,7 @@
                 -webkit-transition: .4s;
                 -o-transition: .4s;
                 transition: .4s;
-            }            
+            }
             .list {
                 width: 100%;
                 border-radius: 0;
@@ -123,7 +123,7 @@
             bottom: 8px;
             right: 41px;
         }
-    }   
+    }
 }
 
 .contact {
@@ -153,9 +153,9 @@
 }
 
 
-    
 
-    
+
+
 
 
 
