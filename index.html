@@ -188,9 +188,7 @@
                         <!--                        <span class="span">About</span>-->
                         <h2>About TrustCare</h2>
                     </div>
-                    <p> We Aim to build a bridge of communication
-                        between Care Facilities, Care Providers
-                        and Patients’ Families
+                    <p style="text-align: justify"> Awake AI, a McGill-based start-up, has developed a solution to improve care quality and address staff shortages at seniors’ homes and CHSLDs. It’s an AI-based system that analyses real-time video streams, detects unexpected activity changes, emergency cases, and triggers safety alerts. The technology ensures data privacy by eliminating the need for human observation of the video streams and personal data transmission.
                     </p>
                     <div class="box d-flex wow fadeInUp">
                         <div class="thumb">
@@ -497,8 +495,11 @@
                                                 <ul class="team-social-link">
                                                     <li><a :href="item.links.linkedin" class="social-icon"><i
                                                             class="fab fa-linkedin"></i></a></li>
-                                                    <li><a :href="item.links.github" class="social-icon"><i
-                                                            class="fab fa-github"></i></a></li>
+                                                    <li v-if="item.links.github!==''">
+                                                        <a :href="item.links.github" class="social-icon">
+                                                            <i class="fab fa-github"></i>
+                                                        </a>
+                                                    </li>
                                                     <li><a data-toggle="modal" :data-target="'#' + item.id"
                                                            style="cursor:pointer;"
                                                            @click="showModal(item.id)"><i class="fa fa-info"></i></a>
@@ -621,8 +622,9 @@
                                                     <ul class="team-social-link">
                                                         <li><a :href="item.links.linkedin" class="social-icon"><i
                                                                 class="fab fa-linkedin"></i></a></li>
-                                                        <li><a :href="item.links.github" class="social-icon"><i
-                                                                class="fab fa-github"></i></a></li>
+                                                        <li v-if="item.links.github!==''"><a :href="item.links.github" class="social-icon">
+                                                            <i class="fab fa-github"></i></a>
+                                                        </li>
                                                         <li><a data-toggle="modal" :data-target="'#' + item.id"
                                                                style="cursor:pointer;"
                                                                @click="showModal(item.id)"><i class="fa fa-info"></i></a>
@@ -1200,6 +1202,19 @@
                 "linkedin": "https://www.linkedin.com/in/ryan-xu-0515/"
             },
             "bio": ""
+        },
+        {
+            "id": "el",
+            "image": "assets/images/gallery/Egor.png",
+            "firstName": "Egor",
+            "lastName": "Luhauskikh",
+            "position": "Business Developer",
+            "year": "2022",
+            "links": {
+                "github": "",
+                "linkedin": "https://www.linkedin.com/in/luhauskikh/"
+            },
+            "bio": "He is an MBA student at McGill University, Desautels Faculty of Management specializing in Global Strategy and Leadership. He received Medical Degree from Belarusian State Medical University (Belarus) and master’s degree in Health Policy and Management from the University of Southern Maine (USA). He has extensive experience in the pharmaceutical sector (J&J, AstraZeneca, GSK) leading cross-functional teams and working on complex projects to accelerate patients' access to innovative medicines."
         }
         ]
     mentorList = [
