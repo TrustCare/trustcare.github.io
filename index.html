@@ -414,27 +414,27 @@
         <!--                </ul>-->
         <!--            </div>-->
         <!--        </div>-->
-        <div class="row">
-            <div v-for="item in activityList" class='col-lg-4 col-md-6 col-sm-12'>
-                <div class="team-item mb-30 wow fadeInUp" data-wow-delay=".2s">
-                    <div class="team-img">
-                        <img :src="item.image" alt="">
-                        <div class="team-overlay">
-                            <div class="team-overly-content">
-                                <h4 class="title">
-                                    {{item.name}} - {{item.semester}}</h4>
-                            </div>
-                            <div class="team-info">
-                                <h4 class="title" style="font-size: 25px; line-height: 10px; margin-top: 15%;">
-                                    {{item.name}} - {{item.semester}}</h4>
-                                <span class="position" style="font-size: 20px; line-height: 35px; margin-top: 5%;">
-                            {{item.event}}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--        <div class="row">-->
+<!--            <div v-for="item in activityList" class='col-lg-4 col-md-6 col-sm-12'>-->
+<!--                <div class="team-item mb-30 wow fadeInUp" data-wow-delay=".2s">-->
+<!--                    <div class="team-img">-->
+<!--                        <img :src="item.image" alt="">-->
+<!--                        <div class="team-overlay">-->
+<!--                            <div class="team-overly-content">-->
+<!--                                <h4 class="title">-->
+<!--                                    {{item.name}} - {{item.semester}}</h4>-->
+<!--                            </div>-->
+<!--                            <div class="team-info">-->
+<!--                                <h4 class="title" style="font-size: 25px; line-height: 10px; margin-top: 15%;">-->
+<!--                                    {{item.name}} - {{item.semester}}</h4>-->
+<!--                                <span class="position" style="font-size: 20px; line-height: 35px; margin-top: 5%;">-->
+<!--                            {{item.event}}</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
 </section>
 <!--====== End Portfolio Section ======-->
@@ -717,14 +717,6 @@
         </div>
     </div>
     </div>
-    <!--        <div class="row">-->
-    <!--            <div class="col-lg-12">-->
-    <!--                <div class="button text-center wow fadeInUp">-->
-    <!--                    <a href="team.html" class="main-btn">Join With Our Team</a>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    </div>
 </section>
 <section class="contact-area-v1 pt-60 light-bg pb-60">
     <div class="container">
@@ -752,107 +744,70 @@
 </section>
 <!--====== End Team section ======-->
 <!--====== Start Footer ======-->
-<footer class="footer-area footer-area-v2" id="contact">
-
-    <div class="footer-widget pt-60 pb-60">
+<footer class="footer-area footer-area-v3" id="contact">
+    <div class="footer-widget pt-40 bg-cover" style="background-image: url(assets/images/bg/footer-bg.png);">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <img src="assets/images/logo/logo2_footer.png" alt="footer_logo">
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="widget about-widget wow fadeInUp mb-30 mt-30">
-                        <h4 class="widget-title">Contact Us</h4>
-                        <div class="about-content">
-                            <div style="margin-bottom:10px">info@awakeai.ca</div>
-                            <div>McGill University, <br> Montreal, QC, Canada</div>
-                            <ul class="social-link">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="https://www.linkedin.com/company/awakeai/"><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            </ul>
+            <div class="footer-top pb-20">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-2">
+                            <div class="footer-logo">
+                                <a href="index.html"><img src="assets/images/logo/logo2_footer.png" alt=""></a>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <!--                    <div class="widget instagram-feed-widget wow fadeInUp mb-30">-->
-                    <!--                        <h4 class="widget-title">Group Picture Feeds</h4>-->
-                    <!--                        <ul class="instagram-list">-->
-                    <!--                            <li>-->
-                    <!--                                <a href="about-us.html">-->
-                    <!--                                    <img src="assets/images/footer/instagram/insta-1.jpg" alt="">-->
-                    <!--                                    <div class="insta-overlay">-->
-                    <!--                                        <i class="fa fa-info-circle"></i>-->
-                    <!--                                    </div>-->
-                    <!--                                </a>-->
-                    <!--                            </li>-->
-                    <!--                            <li>-->
-                    <!--                                <a href="about-us.html">-->
-                    <!--                                    <img src="assets/images/footer/instagram/insta-2.jpg" alt="">-->
-                    <!--                                    <div class="insta-overlay">-->
-                    <!--                                        <i class="fa fa-info-circle"></i>-->
-                    <!--                                    </div>-->
-                    <!--                                </a>-->
-                    <!--                            </li>-->
-                    <!--                            <li>-->
-                    <!--                                <a href="about-us.html">-->
-                    <!--                                    <img src="assets/images/footer/instagram/insta-3.jpg" alt="">-->
-                    <!--                                    <div class="insta-overlay">-->
-                    <!--                                        <i class="fa fa-info-circle"></i>-->
-                    <!--                                    </div>-->
-                    <!--                                </a>-->
-                    <!--                            </li>-->
-                    <!--                            <li>-->
-                    <!--                                <a href="about-us.html">-->
-                    <!--                                    <img src="assets/images/footer/instagram/insta-4.jpg" alt="">-->
-                    <!--                                    <div class="insta-overlay">-->
-                    <!--                                        <i class="fa fa-info-circle"></i>-->
-                    <!--                                    </div>-->
-                    <!--                                </a>-->
-                    <!--                            </li>-->
-                    <!--                            <li>-->
-                    <!--                                <a href="about-us.html">-->
-                    <!--                                    <img src="assets/images/footer/instagram/insta-5.jpg" alt="">-->
-                    <!--                                    <div class="insta-overlay">-->
-                    <!--                                        <i class="fa fa-info-circle"></i>-->
-                    <!--                                    </div>-->
-                    <!--                                </a>-->
-                    <!--                            </li>-->
-                    <!--                            <li>-->
-                    <!--                                <a href="about-us.html">-->
-                    <!--                                    <img src="assets/images/footer/instagram/insta-6.jpg" alt="">-->
-                    <!--                                    <div class="insta-overlay">-->
-                    <!--                                        <i class="fa fa-info-circle"></i>-->
-                    <!--                                    </div>-->
-                    <!--                                </a>-->
-                    <!--                            </li>-->
-                    <!--                            <li>-->
-                    <!--                                <a href="about-us.html">-->
-                    <!--                                    <img src="assets/images/footer/instagram/insta-7.jpg" alt="">-->
-                    <!--                                    <div class="insta-overlay">-->
-                    <!--                                        <i class="fa fa-info-circle"></i>-->
-                    <!--                                    </div>-->
-                    <!--                                </a>-->
-                    <!--                            </li>-->
-                    <!--                            <li>-->
-                    <!--                                <a href="about-us.html">-->
-                    <!--                                    <img src="assets/images/footer/instagram/insta-8.jpg" alt="">-->
-                    <!--                                    <div class="insta-overlay">-->
-                    <!--                                        <i class="fa fa-info-circle"></i>-->
-                    <!--                                    </div>-->
-                    <!--                                </a>-->
-                    <!--                            </li>-->
-                    <!--                            <li>-->
-                    <!--                                <a href="about-us.html">-->
-                    <!--                                    <img src="assets/images/footer/instagram/insta-9.jpg" alt="">-->
-                    <!--                                    <div class="insta-overlay">-->
-                    <!--                                        <i class="fa fa-info-circle"></i>-->
-                    <!--                                    </div>-->
-                    <!--                                </a>-->
-                    <!--                            </li>-->
-                    <!--                        </ul>-->
-                    <!--                    </div>-->
+                        <div class="col-lg-1">
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="widget about-widget wow fadeInUp mb-30" style="visibility: visible; animation-name: fadeInUp;">
+                                <h4 class="widget-title">About Us</h4>
+                                <div class="about-content">
+                                    <p style="text-align: justify">
+                                        AwakeAI is a tech startup that aims to facilitate the information flow from the living-alone seniors to their family members.
+                                        Our vision is to create a digitalized senior care environment by modern technology and provide the living-alone seniors with the highest quality of care anytime and anywhere.
+                                    </p>
+<!--                                    <ul class="social-link">-->
+<!--                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>-->
+<!--                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>-->
+<!--                                        <li><a href="#"><i class="fab fa-behance"></i></a></li>-->
+<!--                                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>-->
+<!--                                    </ul>-->
+                                </div>
+                            </div>
+                         </div>
+                        <div class="col-lg-1">
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="widget contact-widget mb-30">
+                                <h4 class="widget-title">Get In Touch</h4>
+                                <div class="contact-info-item">
+                                    <div class="icon">
+                                        <i class="fab fa-linkedin"></i>
+                                    </div>
+                                    <div class="info">
+                                        <span>LinkedIn</span>
+                                        <h5><a href="https://ca.linkedin.com/company/awakeai">AwakeAI Inc</a></h5>
+                                    </div>
+                                </div>
+                                <div class="contact-info-item">
+                                    <div class="icon">
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                    <div class="info">
+                                        <span>Email Address</span>
+                                        <h5><a href="mailto:info@awakeai.ca"><span class=""></span>info@awakeai.ca</a></h5>
+                                    </div>
+                                </div>
+                                <div class="contact-info-item">
+                                    <div class="icon">
+                                        <i class="fal fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="info" >
+                                        <span>Office Address</span>
+                                        <h5 style="line-height: unset">1211 Rue Drummond <br> Montreal, Quebec, Canada <br> H3G 0E6</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -860,24 +815,10 @@
     <div class="copyright-area">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="copyright-text">
+                <div class="col-lg-12">
+                    <div class="copyright-text text-center">
                         <p>Copyright &copy; 2022. AwakeAI Inc. All rights reserved.</p>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-12 col-sm-12">
-<!--                    <div class="footer-logo text-center">-->
-<!--                        <a href="index.html"><img src="assets/images/logo/logo.png" alt=""></a>-->
-<!--                    </div>-->
-                </div>
-                <div class="col-lg-5 col-md-12 col-sm-12">
-                    <!--                    <div class="copyright-nav">-->
-                    <!--                        <ul>-->
-                    <!--                            <li><a href="about-us.html">Get Support</a></li>-->
-                    <!--                            <li><a href="about-us.html">Refund Policy</a></li>-->
-                    <!--                            <li><a href="about-us.html">Get In Touch</a></li>-->
-                    <!--                        </ul>-->
-                    <!--                    </div>-->
                 </div>
             </div>
         </div>
