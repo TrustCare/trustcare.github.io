@@ -495,7 +495,8 @@
                                             <div class="team-social">
                                                 <span class="hover-btn"><i class="fal fa-plus"></i></span>
                                                 <ul class="team-social-link">
-                                                    <li><a :href="item.links.linkedin" class="social-icon"><i
+                                                    <li v-if="item.links.linkedin!==''">
+                                                        <a :href="item.links.linkedin" class="social-icon"><i
                                                             class="fab fa-linkedin"></i></a></li>
                                                     <li v-if="item.links.github!==''">
                                                         <a :href="item.links.github" class="social-icon">
@@ -622,16 +623,20 @@
                                                 <div class="team-social">
                                                     <span class="hover-btn"><i class="fal fa-plus"></i></span>
                                                     <ul class="team-social-link">
-                                                        <li><a :href="item.links.linkedin" class="social-icon"><i
-                                                                class="fab fa-linkedin"></i></a></li>
-                                                        <li v-if="item.links.github!==''"><a :href="item.links.github"
-                                                                                             class="social-icon">
+                                                        <li v-if="item.links.linkedin!==''">
+                                                            <a :href="item.links.linkedin" class="social-icon">
+                                                                <i class="fab fa-linkedin"></i></a>
+                                                        </li>
+                                                        <li v-if="item.links.github!==''">
+                                                            <a :href="item.links.github" class="social-icon">
                                                             <i class="fab fa-github"></i></a>
                                                         </li>
-                                                        <li><a data-toggle="modal" :data-target="'#' + item.id"
+                                                        <li>
+                                                            <a data-toggle="modal" :data-target="'#' + item.id"
                                                                style="cursor:pointer;"
-                                                               @click="showModal(item.id)"><i
-                                                                class="fa fa-info"></i></a>
+                                                               @click="showModal(item.id)">
+                                                                <i class="fa fa-info"></i>
+                                                            </a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -794,8 +799,8 @@
                 </div>
             </div>
             <div class="row align-items-center">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-md-2 col-sm-1"></div>
+                <div class="col-md-3 col-sm-12">
                     <div class="widget contact-widget mb-30">
                         <div class="contact-info-item">
                             <div class="icon">
@@ -808,7 +813,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-md-3 col-sm-12">
+                    <div class="widget contact-widget mb-30">
+                        <div class="contact-info-item">
+                            <div class="icon">
+                                <i class="fal fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info">
+                                <span>Office Address</span>
+                                <h5><a style="pointer-events: none">Montreal, Quebec</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12">
                     <div class="widget contact-widget mb-30">
                         <div class="contact-info-item">
                             <div class="icon">
@@ -822,19 +840,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="widget contact-widget mb-30">
-                        <div class="contact-info-item">
-                            <div class="icon">
-                                <i class="fal fa-map-marker-alt"></i>
-                            </div>
-                            <div class="info">
-                                <span>Office Address</span>
-                                <h5>Montreal, Quebec</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -1096,7 +1102,7 @@
             "year": "2021",
             "links": {
                 "github": "",
-                "linkedin": "https://www.linkedin.com/in/jessica-li-13b231208/"
+                "linkedin": ""
             },
             "bio": "Jessica is currently in her second year of studying in Software Engineering, she loves learning new concepts and applying them to the real world. She enjoys being creative and has an artistic side on top of her logical one, which is why front end development is of particular interest to her."
         },
@@ -1110,24 +1116,23 @@
             "year": "2020",
             "links": {
                 "github": "https://s1lin.github.io/",
-                "linkedin": "https://www.linkedin.com/in/shilei-lin-269191128/"
+                "linkedin": "https://www.linkedin.com/in/shilei-lin/"
             },
             "bio": "Shilei holds a M.Sc. degree from McGill in the school of Computer Science, specializing in high-performance computing and software development. He possesses a B.A. degree in Mathematics and Computer Science from St. John’s University. He has worked for two years as a full-stack developer at YoueData."
         },
         {
             "id": "at",
-            "image": "assets/images/gallery/Abdulrahman.png",
+            "image": "assets/images/gallery/Abdulrahman.jpg",
             "firstName": "Abdulrahman",
             "lastName": "Takiddeen",
             "position": "Algorithm Developer",
             "year": "2020",
             "links": {
                 "github": "",
-                "linkedin": ""
+                "linkedin": "https://www.linkedin.com/in/abdulrahman-takiddeen-b7a12912b/"
             },
             "bio": "Abdulrahman is an engineer who is passionate about bridging the gap between AI research and real-world technologies. His main area of expertise is applied machine learning, algorithm design, bioinformatics, signal processing and computer vision. As a master’s student at McGill University, his research focuses on applying machine learning algorithms to model genomic data from cancer patients and on helping identify therapeutic target genes. "
         },
-
         {
             "id": "rl",
             "image": "assets/images/gallery/Ruofeng.png",
@@ -1163,7 +1168,7 @@
             "lastName": "Cameron",
             "position": "Mentor",
             "email": "",
-            "year": "2020",
+            "year": "2021",
             "links": {
                 "github": "",
                 "linkedin": "https://www.linkedin.com/in/hugh-cameron-164219/"
@@ -1172,7 +1177,7 @@
         },
         {
             "id": "ma",
-            "image": "assets/images/gallery/Michael.png",
+            "image": "assets/images/gallery/Michael.jpg",
             "firstName": "Michael",
             "lastName": "Avedesian",
             "position": "Business Mentor",
@@ -1182,7 +1187,7 @@
                 "github": "",
                 "linkedin": ""
             },
-            "bio": "Dr. Avedesian has over thirty-three years of operations, technology and business management experience in the corporate sector. He holds a Ph.D. in Engineering from Cambridge University. He then had three start-up companies for which two he was the founding CEO, and one went IPO on the Toronto Stock Exchange."
+            "bio": "Dr. Avedesian has over 33 years of operations, technology and business management experience in the corporate sector. He holds a bachelor’s degree with honors in Chemical Engineering from McGill University, and a Ph.D. in Engineering from Cambridge University.Dr. Avedesian then had three start-up companies for which two he was the founding CEO. Two of them were successful and one went IPO on the Toronto Stock Exchange. Currently, he serves on the Board of Directors of TM4, a company which designs and manufactures electromechanical drive train systems for hybrid and electric vehicles. Michael is a member of Ordre des ingenieurs du Quebec, Professional Engineers of Ontario, and the C.S.Ch.E. (for which he was President in 1992–1993). He was elected Fellow of the CIC in 1993. In 1998 he was inducted as a Fellow in the Canadian Academy of Engineering."
         },
         {
             "id": "dp",
@@ -1219,7 +1224,7 @@
             "lastName": "Xu",
             "position": "Consultant",
             "email": "",
-            "year": "2020",
+            "year": "2021",
             "links": {
                 "github": "",
                 "linkedin": "https://www.linkedin.com/in/ryan-xu-0515/"
